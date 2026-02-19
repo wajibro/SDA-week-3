@@ -1,11 +1,15 @@
+import numpy as np
+
 def linear_search(arr, target):
     for i in range(len(arr)):
         if arr[i] == target:
             return i
     return "gagal"
 
-data = [15,8,23,42,7,16,31,9]
-target = 16
+data = np.random.randint(1, 100, size=10)
+print(data)
+target = input("Angka yang ingin anda cari?: ")
+target = int(target)
 
 hasil = linear_search(data, target)
 if hasil == "gagal":
